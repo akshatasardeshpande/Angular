@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
 *,
 *::after,
 *::before {
@@ -15,5 +15,4 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  color: #fff;
 }

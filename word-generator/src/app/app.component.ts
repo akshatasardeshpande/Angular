@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import arrayWords from "./words";
+import arrayWords from "../utils/words";
 
 @Component({
   selector: 'app-root',
