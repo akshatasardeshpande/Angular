@@ -1,27 +1,24 @@
-# ToDo
+## ⭐ To-do App Project  ⭐
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+## 📌 **Live Site URL:** <a href="https://the-to-do-application.netlify.app/">**Visit Now** 🚀</a>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📌 My Learnings
+👉 Creating model for todo<br>
+👉 Angular pipe<br>
+👉 Learnt about Service - Business logic <br>
+👉 Learnt aboutlife cycle hooks<br>
+👉 Learnt aboutNgClass & NgFor<br>
+👉 Learnt aboutReactive form & template driven form<br>
+👉 Learnt about Adding form in Module<br>
+👉 Learnt about Two way binding syntax <br>
+👉 Learnt about Angular wrapper elements<br>
 
-## Code scaffolding
+<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📌 Screenshot
+![image](./to-do.png)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This is a simple CRUD App. The page is divided in to two parts. The first part or the LHS are taken up by the images.
+The RHS part is taken up by the simple input form wher you are just going to add a to-do. You can just click on the "Add Todo" to add items.
+As soon as you check mark, the css property is going to kick in there.
