@@ -13,12 +13,11 @@ max="50"
 value="{{limit}}"
 
 class="slider form-control-range"
-(change)="handleSlideChange($event.target.value)" 
-
-
+(change)="handleSlideChange($event)"
 />
 
 <button (click)="generate()" class="btn btn-info">Generate Words</button>
+
 <div *ngIf="words" class="card card-body">
   <p class="display-4">
     {{ words }}

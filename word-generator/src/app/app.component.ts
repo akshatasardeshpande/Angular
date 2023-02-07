@@ -12,8 +12,9 @@ export class AppComponent {
 words = ''
 limit = 10;
 
-handleSlideChange(newLimit: number){
-  this.limit = newLimit;
+handleSlideChange(newLimit: Event){
+  let htmlElement = newLimit.target as HTMLInputElement;
+  this.limit = parseInt(htmlElement.value);
   }
 
   generate(){
