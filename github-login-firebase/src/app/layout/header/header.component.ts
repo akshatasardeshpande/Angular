@@ -8,33 +8,37 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
-}
 // export class HeaderComponent implements OnInit {
-//   email = null;
-
-//   constructor(
-//     private auth: AuthService,
-//     private router: Router,
-//     private toastr: ToastrService
-//   ) {
-//     auth.getUser().subscribe((user) => {
-//       this.email = user?.email;
-//     });
-//   }
-
+//   constructor() {}
 //   ngOnInit(): void {}
-
-//   async handleSignOut() {
-//     try {
-//       const res = await this.auth.signOut();
-//       this.router.navigateByUrl('/signin');
-//       this.toastr.info('Login Again to continue');
-//       this.email = null;
-//     } catch (error) {
-//       this.toastr.error('Somthing is wrong');
-//     }
-//   }
 // }
+export class HeaderComponent implements OnInit {
+  // email : null;
+  email : any ;
+  //  email: string = " ";
+  //null is considered as falsy value
+
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private toastr: ToastrService,
+   
+  ) {
+    auth.getUser().subscribe((user) => {
+      this.email = user?.email ;
+    });
+  }
+
+  ngOnInit(): void {}
+
+  async handleSignOut() {
+    try {
+      const res = await this.auth.signOut();
+      this.router.navigateByUrl('/signin');
+      this.toastr.info('Login Again to continue');
+      this.email = null;
+    } catch (error) {
+      this.toastr.error('Somthing is wrong');
+    }
+  }
+}
