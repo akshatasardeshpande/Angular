@@ -7,10 +7,11 @@ import { GithubService } from './../../services/github.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  user = null;
-  // user = undefined;
+  // user = null;
+  user: any = [];
   userName: string ;
-  error = null;
+  // error = null;
+  error: any = " ";
 
   constructor(
     private ref: ChangeDetectorRef,
