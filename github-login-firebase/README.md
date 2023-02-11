@@ -1,6 +1,6 @@
 ## ⭐ The Github finder app ⭐
 
-## 📌 **Live Site URL:** <a href="https://the-github-finder-app.netlify.app/signin">**Visit Now** 🚀</a>
+## 📌 **Live Site URL:** <a href="https://the-github-finder-app.netlify.app/">**Visit Now** 🚀</a>
 
 
 ## 📌 My Learnings
