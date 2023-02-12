@@ -11,7 +11,7 @@ import { PasswordChecker } from "./custom-validators/password-checker";
 export class AppComponent implements OnInit {
   title = "signup-reactive";
 
-  registerForm: FormGroup;
+  registerForm: FormGroup ;
   submitted = false;
 
   constructor(private formbuilder: FormBuilder) {}
