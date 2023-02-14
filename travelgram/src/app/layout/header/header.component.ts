@@ -9,7 +9,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./header.component.css"],
 })
 export class HeaderComponent implements OnInit {
-  email = null;
+  // email = null;
+  email : any;
   constructor(
     private auth: AuthService,
     private router: Router,
