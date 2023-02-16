@@ -14,7 +14,7 @@ import { AngularFireDatabase } from "@angular/fire/compat/database";
 
 //browser image resizer
 import { readAndCompressImage } from "browser-image-resizer";
-// import { imageConfig } from "src/utils/config";
+import { imageConfig } from "src/utils/config";
 
 @Component({
   selector: "app-signup",
