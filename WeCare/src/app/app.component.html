@@ -5,29 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px'
+        },
+        extend: {
+          colors: {
+            myBlue: '#3944f7',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <section aria-label="navbar">
-          <nav class="navbar-container">
-            <header>
-              <div>
-                <h1>{{title}}</h1>
-              </div>
-                <!-- <div>
-                    <img src="./assets/Images/WeCare.png" alt="brand-logo" height="100px" width="150px" />
-                  </div> -->
-            </header>
-  
-            
-            <div class="button-group">
-              <button class="nav-button">Contact Us</button>
+<body class="bg-white">
+    <nav class="relative container bg-black mx-auto p-3">
+      <!-- <div class="container px-5 py-2 mx-auto flex items-center sm:flex-row flex-col">
+        <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4"> -->
+        <div class="flex items-center justify-between text-white">
+            <div class="font-bold" >WeCare</div>
+            <!-- <div class="font-bold" >{{title}}</div> -->
+            <div ></div>
+            <!-- <div ><i class="fa-thin fa-phone"></i></div> -->
+            <div>Call Us: 080 2233447</div>
+        </div>
+    </nav>
+
+    <section class="text-white body-font overflow-hidden justify-center">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">We are at the heart of appropriate care</h1>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          
+          <div class="p-4 xl:w-1/4 md:w-1/2 w-full ">
+            <div class="h-full p-6 rounded-lg border-2 border-black flex flex-col relative overflow-hidden bg-black">
+              <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-black">
+                <span><img src=" D:\WebDevBootcamp\angular trial\WeCare02\src\assets\Images\LifeCoachLogIn" alt=""></span>
+              </h1>
+              
+              <button class="flex items-center mt-auto text-white bg-cyan-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                Login as a Coach
+              </button>
+              <br>
+              <button class="flex items-center mt-auto text-white bg-cyan-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                Join as a Coach
+              </button>
             </div>
-          </nav>
-        </section>
-    </div>
+          </div>
+          <div class="p-4 xl:w-1/4 md:w-1/2 w-full ">
+            <div class="h-full p-6 rounded-lg border-2 border-black flex flex-col relative overflow-hidden bg-black">
+              <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-black">
+                <span><img src=" D:\WebDevBootcamp\angular trial\WeCare02\src\assets\Images\UserLogIn" alt=""></span>
+              </h1>
+              
+              <button class="flex items-center mt-auto text-white bg-cyan-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                Login as a User
+              </button>
+              <br>
+              <button class="flex items-center mt-auto text-white bg-cyan-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                Join as a User
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section>
+      <app-home></app-home>
+    </section>
+    <footer class="body-font bg-black">
+      <div class="container px-5 py-2 mx-auto flex items-center sm:flex-row flex-col">
+          <p class="text-sm text-white sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4 justify-center">
+          Copyright &copy 2020, WeCare. All rights reserved
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
-
-<app-root> </app-root>
-<app-home> </app-home>
