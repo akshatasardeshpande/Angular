@@ -12,8 +12,6 @@ export class HomeComponent {
   // Join as a coach --> SignupComponent --> /signup/coaches
 
 
-
-
   // Login as a Coach --> LoginComponent --> /login/coaches
 
 
