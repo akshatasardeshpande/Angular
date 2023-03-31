@@ -18,5 +18,6 @@ import { BookRideComponent } from './book-ride/book-ride.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+  // bootstrap: [BookRideComponent]
 })
 export class AppModule { }
