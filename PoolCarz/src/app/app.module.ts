@@ -17,7 +17,7 @@ import { BookRideComponent } from './book-ride/book-ride.component';
     BrowserModule,
   ],
   providers: [],
-  // bootstrap: [AppComponent]
-  bootstrap: [BookRideComponent]
+  bootstrap: [AppComponent]
+  // bootstrap: [BookRideComponent]
 })
 export class AppModule { }
