@@ -49,6 +49,32 @@
 <!-- I. Display 3 buttons followed by a button(Offer a Ride) when clicked on Show All Rides -->
 <!-- II. Store the ride details in an array & render it in a table. The array should contain the following fields:
 id-number, offerId - string, name - string, car - string, seatsLeft - number, pickUp - string, destination - string -->
+<div
+    class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold"
+    style="background-color: #718d97; font-family: 'Arial Narrow'">
+      Please select a ride!
+</div>
+<div class="col-12">
+  <table class="table">
+    <tr>
+      <th>Start Point</th>
+      <th>End Point</th>
+      <th>Seats Available</th>
+    </tr>
+    <tr *ngFor="let ride of ShowAllRides">
+      <td>
+        <b>{{ride.StartPoint}}</b>
+      </td>
+      <td>
+          {{ride.EndPoint}}
+      </td>
+      <td>
+          {{ride.SeatsAvailable}}
+      </td>
+    </tr>
+  </table>
+</div>
+      
 <!-- III. When the user again clicks the "Show All Rides" button, it should hide the four buttons & the table rendered.
 This button should act as a toggle button to display & hide alternatively -->
 <!-- IV. Create a custom attribute directive called MouseHoverDirective and apply it to the table rows.
