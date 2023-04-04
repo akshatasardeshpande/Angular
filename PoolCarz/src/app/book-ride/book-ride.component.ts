@@ -35,6 +35,12 @@ ngOnInit() {
     },
   ]
 }
+ShowAll($event: any){
+if($event.target.innerHTMl == "")
+{
+  
+}
+}
 
 }
 
