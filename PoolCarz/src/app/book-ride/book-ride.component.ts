@@ -35,12 +35,12 @@ ngOnInit() {
     },
   ]
 }
-ShowAll($event: any){
-if($event.target.innerHTMl == "")
-{
+// ShowAll($event: any){
+// if($event.target.innerHTMl == "")
+// {
   
-}
-}
+// }
+// }
 
 }
 

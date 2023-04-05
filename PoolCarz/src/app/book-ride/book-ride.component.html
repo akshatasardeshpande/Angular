@@ -1,0 +1,52 @@
+ <div class="container-fluid">
+    <h5 class="modal-title">Book a ride</h5>
+    <p>Poolcarz is an online application that enable users to share rides with others. You can either book a ride or offer a ride.
+      Did we mention that this app is advertisement free?
+      To add on top of that its free of cost!
+      So what are you waiting for?
+      Check out the rides available & start PCing!!</p>
+   
+    <!-- <button type="button" class="btn btn-primary" onclick="return false" (click)="ShowAllRides(StartPoint.value)">Show All Rides</button> -->
+    <button type="button" class="btn btn-primary" >Show All Rides</button>
+
+
+<!-- I. Display 3 buttons followed by a button(Offer a Ride) when clicked on Show All Rides -->
+<!-- II. Store the ride details in an array & render it in a table. The array should contain the following fields:
+id-number, offerId - string, name - string, car - string, seatsLeft - number, pickUp - string, destination - string -->
+<div
+    class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold"
+    style="background-color: #718d97; font-family: 'Arial Narrow'">
+      Please select a ride!
+</div>
+<div class="col-12">
+  <table class="table">
+    <tr>
+      <th>Start Point</th>
+      <th>End Point</th>
+      <th>Seats Available</th>
+    </tr>
+    <tr *ngFor="let ride of ShowAllRides" >
+      <!-- <button type="button" class="btn btn-primary" (click)=" ShowAllRides[ride]">Show All Rides</button> -->
+      <!-- <tr> -->
+      <!-- <button type="button" (click)="onSelect(hero)"></button> -->
+      <!-- <button type="button" class="btn btn-primary" (click)=" ShowAllRides[ride]">Show All Rides</button> -->
+      <td>
+        <b>{{ride.StartPoint}}</b>
+      </td>
+      <td>
+          {{ride.EndPoint}}
+      </td>
+      <td>
+          {{ride.SeatsAvailable}}
+      </td>
+    </tr>
+  </table>
+</div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Offer a Ride!</button>
+<!-- III. When the user again clicks the "Show All Rides" button, it should hide the four buttons & the table rendered.
+This button should act as a toggle button to display & hide alternatively -->
+<!-- IV. Create a custom attribute directive called MouseHoverDirective and apply it to the table rows.
+When the user hovers the mouse on any row, it should highlight the row in blue color and 
+when the mouse pointer is removed from a row, the color should be removed as shown below. -->
+
+</div>

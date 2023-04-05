@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     BookRideComponent,
-    FormsModule
+    // FormsModule
   ],
   imports: [
     BrowserModule,
