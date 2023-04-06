@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <p>Poolcarz is an online application that enable users to share rides with others. You can either book a ride or offer a ride.
+        Did we mention that this app is advertisement free?
+        To add on top of that its free of cost!
+        So what are you waiting for?
+        Check out the rides available & start PCing!!</p>
+
+        <button type="button" class="btn btn-primary" >Show All Rides</button>
+        <br>
+        <br>
+
+        <button type="button" class="btn btn-primary" >Offer A Ride!</button>
+
+        <!----------------When clicked on "Show All Rides" START ----------------->
+
+        <!--  3buttons side by side -->
+
+        <button type="button" class="btn btn-primary" >To Office</button>
+        <button type="button" class="btn btn-primary" >From Office</button>
+        <button type="button" class="btn btn-primary" >Others</button><br>
+        
+        <!-- heading -->
+        <h3>Please Select A Ride!</h3><br>
+
+        <!-- table -->
+        <table class="table table-bordered">
+            <thead class="thead-dark table-primary" >
+              <tr>
+                <th scope="col">Start Point</th>
+                <th scope="col">End Point</th>
+                <th scope="col">Seats Available</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vanrose Junction</td>
+                <td>Office</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>PTP</td>
+                <td>Office</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Office</td>
+                <td>East-Fort</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Office</td>
+                <td>Central Mall</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        <!-- A button -->
+        <button type="button" class="btn btn-primary" >Offer A Ride!</button>
+        <!----------------When clicked on "Show All Rides" END ----------------->
+</div>
