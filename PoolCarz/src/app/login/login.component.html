@@ -1,55 +1,4 @@
-<!-- Login form-->
-<div class="container container-styles">
-	<div class="col-xs-7 col-xs-offset-3">
-		<div class="panel panel-primary">
-			<div class="panel-heading">{{lTitle}}</div>
-			<div class="panel-body padding">
-				<form class="form-horizontal">
-					<div class="form-group">
-						<label for="username" class="col-xs-4 control-label" style="text-align:left">username</label>
-						<div class="col-xs-8">
-							<!-- <input type="password" class="form-control" [ngClass]="{'valid':loginForm.controls['password'].valid, 'invalid':loginForm.controls['password'].invalid && !loginForm.controls['password'].pristine}" formControlName="password"> -->
-							<input type="username" class="form-control" formControlName="username">
-                            <!-- <div *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].dirty">
-							<div *ngIf="loginForm.controls['password'].errors?.['required']" style="color:red">Password is required</div> -->
-						</div>
-						
-					</div>
-					<div class="form-group">
-						<label for="password" class="col-xs-4 control-label" style="text-align:left">Password</label>
-						<div class="col-xs-8">
-							<!-- <input type="password" class="form-control" [ngClass]="{'valid':loginForm.controls['password'].valid, 'invalid':loginForm.controls['password'].invalid && !loginForm.controls['password'].pristine}" formControlName="password"> -->
-							<input type="password" class="form-control" formControlName="password">
-                            <!-- <div *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].dirty">
-							<div *ngIf="loginForm.controls['password'].errors?.['required']" style="color:red">Password is required</div> -->
-						</div>
-						
-					</div>
-
-					<!-- <div *ngIf="!valid" class="error">Invalid Credentials...Please try again...</div> -->
-					<br />
-
-					<div class="form-group">
-						<span class="col-xs-4"></span>
-						<div class="col-xs-3">
-							<!-- <button (click)="onSubmit()" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button> -->
-                            <button class="btn btn-primary">Login</button>
-						</div>
-						<!-- <span class="col-xs-5" style="top:8px">
-							<a style="color:#337ab7;text-decoration: underline;">Cancel</a>
-						</span> -->
-                        <div class="col-xs-3">
-                            <button class="btn btn-primary">Cancel</button>
-                        </div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- <app-book-ride></app-book-ride> -->
-<!-- Forms:
-I. Write the login template code in login.component.html to render the screen.
+<!-- I. Write the login template code in login.component.html to render the screen.
 -Add required validation to username & password textboxes in LoginComponent & 
 display appropriate error messages when validation fails.
 -Also check for the data validity using data stored in users array & render appropriate failure message.
@@ -58,4 +7,26 @@ II. Create OfferRideComponent as a reactive form with validations
 -Create OfferRideComponent using Angular
 -Create a reactive form as shown above. Add required validation to all the fields.
 -Create a custom validator to check if "Seats Available" textbox has value between 0 to 8.
-If validation fails, it should render error message. -->
+If validation fails, it should render error message.  -->
+
+<div class="container">
+	<h1>Login Form</h1>
+	<form [formGroup]="profileForm">
+		<div class="form-group">
+			<!-- <label>Username</label>
+			<input type="text" class="form-control"> -->
+			<label for="Uname">Username:</label>
+			<input id="Uname" type="text" [form-control]="Uname">
+		</div>
+		<div class="form-group">
+			<!-- <label>Password</label>
+			<input type="password" class="form-control"> -->
+			<!-- <label for="fc">Password</label>
+			<input id="fc" type="password" [form-control]="Password"> -->
+		</div>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Login</button>
+		</div>
+	</form>
+</div>

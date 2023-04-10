@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BookRideComponent,
+    ReactiveFormsModule,
+    FormGroup
     // FormsModule
   ],
   imports: [
