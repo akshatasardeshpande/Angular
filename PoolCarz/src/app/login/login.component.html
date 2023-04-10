@@ -15,27 +15,42 @@ If validation fails, it should render error message.  -->
 			Login Form
 		</h5>
 		<div class="card-body">
-			<form>
+			<form [formGroup]="registerForm" (ngSubmit)="onLogin()">
 				<div class="form-row">
 					<div class="form-group">
 						<label>Username</label>
-						<input type="text" class="form-control"/>
+						<input formControlName="uName" type="text" class="form-control"
+						[ngClass]="{'is-invalid': login && h['uName'].errors}"
+						/>
+						<div *ngIf="login && h['uName'].errors"  class="text-warning">
+							<div>Username is required</div>
+						</div>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" class="form-control"/>
+						<input formControlName="password" type="password" class="form-control"
+						[ngClass]="{'is-invalid' : login && h['password'].errors}"
+						/>
+						<div *ngIf="login && h['password'].errors" class="text-warning">
+							<div>Password is required</div>
+						</div>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group">
 						<label>Confirm Password</label>
-						<input type="password" class="form-control"/>
+						<input formControlName="confirmPassword" type="password" class="form-control"
+						[ngClass]="{'is-invalid' : login && h['confirmPassword'].errors}"
+						/>
+						<div *ngIf="login && h['confirmPassword'].errors" class="text-warning">
+							<div>Confirm Password is required</div>
+						</div>
 					</div>
 				</div>
 				<div class="text-center">
-					<button class="btn btn-success btn-lg px-4 mr-3">Login</button>
+					<button (click)="onLogin()" class="btn btn-success btn-lg px-4 mr-3">Login</button>
 				</div>
 			</form>
 		</div>

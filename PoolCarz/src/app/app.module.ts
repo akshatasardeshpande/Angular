@@ -14,12 +14,12 @@ import { BookRideComponent } from './book-ride/book-ride.component';
     AppComponent,
     LoginComponent,
     BookRideComponent,
-    ReactiveFormsModule,
-    FormGroup
+    // FormGroup
     // FormsModule
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,6 +25,10 @@ ngOnInit(): void {
 } );
 }
 
+get h(){
+return this.registerForm.controls;
+}
+
 onLogin(){
   this.login = true;
   if(this.registerForm.invalid){
