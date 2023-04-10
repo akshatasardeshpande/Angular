@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="card bg-dark text-white">
+        <h5 class="card-header text-center">
+            Car Ride Registration form
+        </h5>
+        <div class="card-body">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <div class="form-row">
+                        <label>Name</label>
+                        <input formControlName="Name" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': Submitted && h['Name'].errors}"
+                        />
+                        <div *ngIf="Submitted && h['Name'].errors"  class="text-warning">
+                            <div>Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sLocn -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <label>Start_location</label>
+                        <input formControlName="sLocn" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': Submitted && h['sLocn'].errors}"
+                        />
+                        
+                        <div  *ngIf="Submitted && h['sLocn'].errors" class="text-warning">
+                            <div>Start location is required</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Destn -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <label>Destination</label>
+                        <input formControlName="Destn" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': Submitted && h['Destn'].errors}"
+                        />
+                        
+                        <div  *ngIf="Submitted && h['Destn'].errors" class="text-warning">
+                            <div>Destination is required</div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- Car -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <label>Car</label>
+                        <input formControlName="Car" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': Submitted && h['Car'].errors}"
+                        />
+                        
+                        <div  *ngIf="Submitted && h['Car'].errors" class="text-warning">
+                            <div>Car is required</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seats -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <label>Seats Available</label>
+                        <input formControlName="Seats" type="text" class="form-control"
+                        [ngClass]="{'is-invalid': Submitted && h['Seats'].errors}"
+                        />
+                        
+                        <div  *ngIf="Submitted && h['Seats'].errors" class="text-warning">
+                            <div>Seats Available is required</div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button (click)="onSubmit()" class="btn btn-success">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

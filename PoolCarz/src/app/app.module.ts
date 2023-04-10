@@ -7,6 +7,7 @@ import { FormGroup } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
+import { OfferRideComponent } from './offer-ride/offer-ride.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { BookRideComponent } from './book-ride/book-ride.component';
     AppComponent,
     LoginComponent,
     BookRideComponent,
+    OfferRideComponent,
     // FormGroup
     // FormsModule
   ],
