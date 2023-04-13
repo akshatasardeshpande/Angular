@@ -38,4 +38,13 @@
             Submit
         </button>
     </form>
+    <br>
+    <div>
+        <h3>Employee details</h3>
+        <p>First Name: {{registerForm.get('firstName')?.value }} </p>
+        <p>Last Name: {{registerForm.get('lastName')?.value}} </p>
+        <p>Street: {{registerForm.get('address.street')?.value}} </p>
+        <p>Zip: {{registerForm.get('address.zip')?.value}} </p>
+        <p>City: {{registerForm.get('address.city')?.value}} </p>
+    </div>
 </div>
