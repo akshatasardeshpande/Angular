@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, Validators} from '@angular/forms'
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-registration-form',
@@ -8,13 +8,22 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms'
 })
 export class RegistrationFormComponent implements OnInit {
 
-  registerForm! : FormBuilder;
+  registerForm! : FormGroup;
   submitted! : boolean;
 
   constructor(private formBuilder: FormBuilder){}
 
 ngOnInit(): void {
-  
+  this.registerForm = this.formBuilder.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    address: this.formBuilder.group({
+      street: [],
+      zip :[],
+      city: []
+    }),
+    email: ['',Validators.required]
+  });
 }
 
 }
