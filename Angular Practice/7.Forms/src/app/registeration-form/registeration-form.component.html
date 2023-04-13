@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Registration form</h1>
-    <form>
+    <form [formGroup] = "registerForm">
         <div class="form-group">
             <label>First Name</label>
             <input type="text" class="form-control" formControlName="firstName">
