@@ -22,8 +22,17 @@ ngOnInit(): void {
       zip :[],
       city: []
     }),
-    email: ['',Validators.required]
+    email: ['',[Validators.required, validateEmail]]
   });
 }
 
+
+}
+function validateEmail(c: FormControl): any {
+  let EMAIL_REGEXP = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  return EMAIL_REGEXP.test(c.value) ? null : {
+    emailInvalid: {
+      message: "Invalid Format!"
+    }
+  };
 }

@@ -53,12 +53,11 @@
     </form>
     <br/>
     <div [hidden]="!submitted">
-      <h3>Employee Details</h3>
-      <p>First Name: {{ registerForm.controls.firstName.value }}</p>
-      <p>Last Name: {{ registerForm.controls.lastName.value }}</p>
-      <p>Street: {{ registerForm.controls.address.value.street }}</p>
-      <p>Zip: {{ registerForm.controls.address.value.zip }}</p>
-      <p>City: {{ registerForm.controls.address.value.city }}</p>
-      <p>Email: {{ registerForm.controls.email.value }}</p>
+        <h3>Employee details</h3>
+        <p>First Name: {{registerForm.get('firstName')?.value }} </p>
+        <p>Last Name: {{registerForm.get('lastName')?.value}} </p>
+        <p>Street: {{registerForm.get('address.street')?.value}} </p>
+        <p>Zip: {{registerForm.get('address.zip')?.value}} </p>
+        <p>City: {{registerForm.get('address.city')?.value}} </p>
     </div>
   </div>
