@@ -39,7 +39,7 @@
         </button>
     </form>
     <br>
-    <div>
+    <div [hidden]="!submitted">
         <h3>Employee details</h3>
         <p>First Name: {{registerForm.get('firstName')?.value }} </p>
         <p>Last Name: {{registerForm.get('lastName')?.value}} </p>
