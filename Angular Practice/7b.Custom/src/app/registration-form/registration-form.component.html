@@ -32,6 +32,19 @@
           <input type="text" class="form-control" formControlName="city">
         </fieldset>
       </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email" />   
+        <div *ngIf="registerForm.controls['email'].errors" class="alert alert-danger">
+          Email field is invalid.
+          <p *ngIf="registerForm.controls['email'].errors?.['required']">
+            This field is required!
+          </p>     
+          <p *ngIf="registerForm.controls['email'].errors?.['emailInvalid']">
+            {{ registerForm.controls['email'].errors?.['emailInvalid'].message }}
+          </p>            
+      </div>
+      </div>
       <button type="submit" class="btn btn-primary" (click)="submitted=true">Submit</button>
     </form>
   <br/>
@@ -42,5 +55,6 @@
       <p> Street: {{ registerForm.get('address.street')?.value }}</p>
       <p> Zip: {{ registerForm.get('address.zip')?.value }} </p>
       <p> City: {{ registerForm.get('address.city')?.value }}</p>
+      <p>Email: {{ registerForm.get('email')?.value }}</p>
     </div>
   </div>
