@@ -9,9 +9,9 @@ import {book} from './book';
 })
 export class BookService {
 
-  getBook(){
-  return BOOKS;
+  constructor(private http: HttpClient){}
+  
 }
 
-  constructor() { }
-}
+
+
