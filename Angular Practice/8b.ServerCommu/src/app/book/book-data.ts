@@ -1,5 +1,5 @@
-import { Book } from './book';
-export let BOOKS: Book[] = [
+import { book } from './book';
+export let BOOKS: book[] = [
     { id: 1, name: 'HTML 5' },
     { id: 2, name: 'CSS 3' },
     { id: 3, name: 'Java Script' },
