@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BookComponent } from './book.component';
+import { BOOKS } from './book-data';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
+
+  getBook(){
+  return BOOKS;
+}
 
   constructor() { }
 }
