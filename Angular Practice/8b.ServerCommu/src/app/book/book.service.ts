@@ -11,6 +11,11 @@ export class BookService {
 
   constructor(private http: HttpClient){}
   
+getBooks(): Observable<book[]>{
+return this.http.get<book[]>('') 
+
+}
+
 }
 
 

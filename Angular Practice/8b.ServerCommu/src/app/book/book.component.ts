@@ -13,7 +13,7 @@ books!: book[];
 constructor(private bookService: BookService){}
 
 ngOnInit(): void {
-  this.books = this.bookService.getBook();
+  // this.books = this.bookService.getBooks();
 }
 
 }
