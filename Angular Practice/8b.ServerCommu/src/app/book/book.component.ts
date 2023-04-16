@@ -9,11 +9,12 @@ import { BookService } from './book.service';
 })
 export class BookComponent implements OnInit {
 books!: book[];
+ADD_BOOK !: boolean;
 
 constructor(private bookService: BookService){}
 
 ngOnInit(): void {
-  // this.books = this.bookService.getBooks();
+//  this.books = this.bookService.getBooks
 }
 
 }
