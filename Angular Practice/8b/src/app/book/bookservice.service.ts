@@ -16,6 +16,7 @@ export class BookserviceService {
   //   return BOOKS;
   // }
 
+  //injects httpClient class in to service class
   constructor(private http: HttpClient) { }
 
   // getBooks(): Observable<Book[]> {
@@ -25,7 +26,7 @@ export class BookserviceService {
   // }
 
   getBooks(): Observable<Book[]>{
-    return this.http.get<Book[]>('http://localhost:3020/bookList').
+    return this.http.get<Book[]>('http://localhost:4200//bookList').
     pipe(tap((data:any) => console.log('Data Fetched:' + JSON.stringify(data))));
     catchError(this.handleError);
   }

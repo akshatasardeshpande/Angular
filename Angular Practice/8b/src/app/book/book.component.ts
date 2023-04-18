@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from './book';
 import { BookserviceService } from './bookservice.service';
+import { BOOKS } from './book-data';
 
 @Component({
   selector: 'app-book',
@@ -17,7 +18,7 @@ export class BookComponent implements OnInit {
   getBooks(){
     // this.booksts = this.bookService.getBooks();
     this.bookService.getBooks().subscribe({
-      next: books => this.booksts = books;
+      next: b => this.booksts = this.booksts,
       error:error => this.errorMessage = <any>error
     })
   }
