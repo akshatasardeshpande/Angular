@@ -12,11 +12,14 @@ export class BookComponent implements OnInit {
 
   booksts !: Book[];
   errorMessage !: string;
-
+  ADD_BOOK !: Boolean;
+  UPDATE_BOOK !: Boolean;
+  
   constructor(private bookService: BookserviceService){}
 
   getBooks(){
-    // this.booksts = this.bookService.getBooks();
+   // here b is var
+   //the syntax: next: () => {statements}
     this.bookService.getBooks().subscribe({
       next: b => this.booksts = this.booksts,
       error:error => this.errorMessage = <any>error

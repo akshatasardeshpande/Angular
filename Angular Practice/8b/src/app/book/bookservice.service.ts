@@ -50,6 +50,12 @@ export class BookserviceService {
     return this.http.post('http://localhost:4200/addBook', book, { headers: options }).pipe(
       catchError(this.handleError));
   }
-
+  updateBook(book: Book): Observable<any> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.put<any>('http://localhost:3020/update', book, { headers: options }).pipe(
+      tap((_: any) => console.log(`updated hero id=${book.id}`)),
+      catchError(this.handleError)
+    );
+  }
 }
 

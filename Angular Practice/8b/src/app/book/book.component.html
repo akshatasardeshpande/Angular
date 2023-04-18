@@ -1,9 +1,10 @@
 <h2>My Books</h2>
 <ul class="books">
-    <li *ngFor="let book of booksts">
-    <span class="badge">{{book.id}}
-    </span> {{book.name}}
+    <li *ngFor="let b of booksts">
+    <span class="badge">{{b.id}}
+    </span> {{b.name}}
     </li>
 </ul>
-
+<button class="btn btn-primary" (click)="ADD_BOOK = true">Add Book</button>&nbsp;
+<button class="btn btn-primary" (click)="UPDATE_BOOK = true">Update Book</button>&nbsp;
 <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
