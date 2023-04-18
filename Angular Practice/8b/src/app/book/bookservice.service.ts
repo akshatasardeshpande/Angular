@@ -45,5 +45,11 @@ export class BookserviceService {
     }
     return throwError(()=>errMsg);
   }
+  addBook(book: Book): Observable<any> {
+    const options = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post('http://localhost:4200/addBook', book, { headers: options }).pipe(
+      catchError(this.handleError));
+  }
+
 }
 
