@@ -8,7 +8,7 @@ import { PasswordChecker } from './password-checker';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-lTitle = "LOGIN";
+lTitle = " POOLCARZ LOGIN";
 registerForm !: FormGroup ;
 login = false;
 
