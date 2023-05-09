@@ -6,19 +6,27 @@ import { Directive, ElementRef, Renderer2, HostListener, Input } from '@angular/
 })
 export class MouseHoverDirective {
 
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  @Input() backgroundColor = '#0000ff';
+  ngOnInit(): void {
+    
+  }
+
   
-  @HostListener('mouseover')
-  onMouseOver() {
-    this.backgroundColor = '#0000ff';
-  }
 
-  @HostListener('mouseout')
-  onMouseOut() {
-    this.backgroundColor =  '#ffffff';
+  @HostListener('mouseenter') onMouseEnter() {
+    // this.highlight('#0000ff');
+    this.el.nativeElement.style.backgroundColor = 'blue';
   }
+  
+  @HostListener('mouseleave') onMouseLeave() {
+    // this.highlight('');
+    this.el.nativeElement.style.backgroundColor = 'yellow';
+  }
+  
+  // private highlight(color: string) {
+  //   this.el.nativeElement.style.backgroundColor = color;
+  // }
 
  
 }

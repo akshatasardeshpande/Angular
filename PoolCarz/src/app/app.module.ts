@@ -11,6 +11,7 @@ import { OfferRideComponent } from './offer-ride/offer-ride.component';
 import { MouseHoverDirective } from './mouse-hover.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   // bootstrap: [AppComponent]
