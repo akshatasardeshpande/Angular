@@ -7,7 +7,7 @@
       Check out the rides available & start PCing!!</p>
    
     <!-- <button type="button" class="btn btn-primary" onclick="return false" (click)="ShowAllRides(StartPoint.value)">Show All Rides</button> -->
-    <button type="button" class="btn btn-primary" >Show All Rides</button>
+    <button (click)="clickEvent()" type="button" class="btn btn-primary" >Show All Rides</button>
 
 
 <!-- I. Display 3 buttons followed by a button(Offer a Ride) when clicked on Show All Rides -->
@@ -18,7 +18,8 @@ id-number, offerId - string, name - string, car - string, seatsLeft - number, pi
     style="background-color: #718d97; font-family: 'Arial Narrow'">
       Please select a ride!
 </div>
-<div class="col-12">
+<div  class="col-12" *ngIf = showTable>
+  
   <table class="table">
     <tr>
       <th>Start Point</th>
@@ -41,8 +42,9 @@ id-number, offerId - string, name - string, car - string, seatsLeft - number, pi
       </td>
     </tr>
   </table>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Offer a Ride!</button>
 </div>
-<button type="button" class="btn btn-secondary" data-dismiss="modal">Offer a Ride!</button>
+
 <!-- III. When the user again clicks the "Show All Rides" button, it should hide the four buttons & the table rendered.
 This button should act as a toggle button to display & hide alternatively -->
 <!-- IV. Create a custom attribute directive called MouseHoverDirective and apply it to the table rows.

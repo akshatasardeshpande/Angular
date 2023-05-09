@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 import { OfferRideComponent } from './offer-ride/offer-ride.component';
+import { MouseHoverDirective } from './mouse-hover.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { OfferRideComponent } from './offer-ride/offer-ride.component';
     LoginComponent,
     BookRideComponent,
     OfferRideComponent,
+    MouseHoverDirective,
     // FormGroup
     // FormsModule
   ],
@@ -24,7 +26,7 @@ import { OfferRideComponent } from './offer-ride/offer-ride.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
-  // bootstrap: [BookRideComponent]
+  // bootstrap: [AppComponent]
+  bootstrap: [BookRideComponent]
 })
 export class AppModule { }

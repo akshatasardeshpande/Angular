@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class BookRideComponent implements OnInit {
 
 ShowAllRides : any = [];
+showTable : boolean = false;
 
 ngOnInit() {
   
@@ -41,6 +42,16 @@ ngOnInit() {
   
 // }
 // }
+
+clickEvent(){
+  if(this.showTable == false){
+    this.showTable= true;
+  }
+  else{
+    this.showTable= false;
+  }
+
+}
 
 }
 
