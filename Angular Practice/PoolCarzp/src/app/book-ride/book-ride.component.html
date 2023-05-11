@@ -1,4 +1,4 @@
-<!-- Login form-->
+<!-- Book a Ride form-->
 <div class="container container-styles">
 	<div class="col-xs-7 col-xs-offset-3">
 		<div class="card bg text-center">
@@ -17,7 +17,8 @@
 					<div class="form-group">
 						<span class="col-xs-4"></span>
 						<div class="col-xs-3">
-							<button  class="btn btn-primary" >Show All Rides</button>
+							<!-- <button  class="btn btn-primary" >Show All Rides</button> -->
+                            <button (click)="clickEvent()" type="button" class="btn btn-primary" >Show All Rides</button>
 						</div>
 						<div class="col-xs-3">
 							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" >Offer a Ride!</button>
@@ -28,3 +29,59 @@
 		</div>
 	</div>
 </div>
+<!-- I. Display 3 buttons & a table, followed by a button(Offer a Ride) when clicked on Show All Rides -->
+<!-- <div class="form-group ">
+    <span class="col-xs-4 *ngIf = showBtns"></span>
+						<div class="col-xs-3">
+							<button  class="btn btn-primary" >Show All Rides</button>
+						</div>
+						<div class="col-xs-3">
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" >To Office</button>
+						</div>
+                        <div class="col-xs-3">
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" >From Office</button>
+						</div>
+                        <div class="col-xs-3">
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" >Others</button>
+						</div>
+</div> -->
+<!-- II. Store the ride details in an array & render it in a table. The array should contain the following fields:
+id-number, offerId - string, name - string, car - string, seatsLeft - number, pickUp - string, destination - string -->
+
+<!-- III. When the user again clicks the "Show All Rides" button, it should hide the four buttons & the table rendered.
+This button should act as a toggle button to display & hide alternatively -->
+
+<div  class="col-12" text-center j *ngIf = showTable >
+	<div 
+    class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold"
+    style="background-color: #718d97; font-family: 'Arial Narrow'">
+      Please select a ride!
+</div>
+  <table class="table">
+    <tr>
+      <th>Start Point</th>
+      <th>End Point</th>
+      <th>Seats Available</th>
+    </tr>
+    <tr *ngFor="let ride of ShowAllRides" >
+		<td appMouseHover>
+			<b>{{ride.StartPoint}}</b>
+	
+		  </td>
+		  <td appMouseHover>
+			  {{ride.EndPoint}}
+		  </td>
+		  <td appMouseHover>
+			  {{ride.SeatsAvailable}}
+		  </td>
+	</tr>
+	</table>
+	  <button text-center type="button" class="btn btn-primary" data-dismiss="modal">Offer a Ride!</button>
+</div>
+<!-- IV. Create a custom attribute directive called MouseHoverDirective and apply it to the table rows.
+When the user hovers the mouse on any row, it should highlight the row in blue color and 
+when the mouse pointer is removed from a row, the color should be removed as shown below. -->
+
+
+
+
