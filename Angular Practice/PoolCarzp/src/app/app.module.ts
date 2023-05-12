@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { BookRideComponent } from './book-ride/book-ride.component';
 import { MouseHoverDirective } from './mouse-hover.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginserviceService } from './loginservice.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

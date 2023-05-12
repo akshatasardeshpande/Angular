@@ -1,50 +1,49 @@
 <!-- Login form-->
-<p>login works!</p>
-<!-- <div class="container container-styles">
+
+<div class="container container-styles">
 	<div class="col-xs-7 col-xs-offset-3">
 		<div class="card bg">
 			<div class="card-header text-white bg bg-primary">Login</div>
 			<div class="card-body padding">
-				<form class="form-horizontal" [formGroup]="loginForm">
+				<!-- formGroup is a directive that binds HTML form with the FormGroup property created inside a component class -->
+				<form class="form-horizontal" [formGroup]="fgloginForm">
 					<div class="form-group" >
 						<label for="name" class="col-xs-4 control-label" style="text-align:left">User Name</label>
 						<div class="col-xs-8">
 							<input type="text" class="form-control" 
 							[ngClass]="{
-								'valid':loginForm.controls['userName'].valid,
-								'invalid':loginForm.controls['userName'].invalid && 
-								!loginForm.controls['userName'].pristine
-								}"
+								'valid':fgloginForm.controls['fgName'].valid,
+								'invalid':fgloginForm.controls['fgName'].invalid &&
+								!fgloginForm.controls['fgName'].pristine}"
 							 formControlName="userName">
-							<div *ngIf="loginForm.controls['password'].errors && loginForm.controls['userName'].dirty">
-							<div *ngIf="loginForm.controls['userName'].errors?.['required']" style="color:red">UserName is required</div>
-						</div>
-						</div>
+							 <div *ngIf="fgloginForm.controls['fgPwd'].errors && fgloginForm.controls['fgName'].dirty">
+								<div *ngIf="fgloginForm.controls['fgName'].errors?.['required']" style="color:red">UserName is required</div>
+							</div>
+								
+						</div>	 
 					</div>
 					<div class="form-group">
 						<label for="password" class="col-xs-4 control-label" style="text-align:left">Password</label>
 						<div class="col-xs-8">
 							<input type="password" class="form-control"  
 							[ngClass]="{
-								'valid':loginForm.controls['password'].valid,
-								'invalid':loginForm.controls['password'].invalid &&
-								!loginForm.controls['password'].pristine
-							}"
+								'valid':fgloginForm.controls['fgPwd'].valid, 
+								'invalid':fgloginForm.controls['fgPwd'].invalid && 
+								!fgloginForm.controls['fgPwd'].pristine}" 
 							formControlName="password">
-							<div *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].dirty" >
-							<div *ngIf="loginForm.controls['password'].errors?.['required']" style="color:red">Password is required
-							</div>
-						</div>
+							<div *ngIf="fgloginForm.controls['password'].errors && fgloginForm.controls['password'].dirty">
+								<div *ngIf="fgloginForm.controls['password'].errors?.['required']" style="color:red">Password is required</div>
+								</div>
 						</div>
 					</div>
 
-					<div *ngIf="!valid" class="error">Invalid Credentials...Please try again...</div>
+					<!-- <div  class="error">Invalid Credentials...Please try again...</div> -->
 					<br />
 
 					<div class="form-group">
 						<span class="col-xs-4"></span>
 						<div class="col-xs-3">
-							<button (click)="onSubmit()"  class="btn btn-primary" [disabled]="!loginForm.valid" >Login</button>
+							<button (click)="onSubmit()"  class="btn btn-primary"  >Login</button>
 						</div>
                             <span class="col-xs-5" style= "position: relative; left: 85px; bottom: 36px">
                             <button class="btn btn-primary" style="color:#ffffff;text-decoration: underline;">Cancel</button>
@@ -54,4 +53,4 @@
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
