@@ -7,7 +7,8 @@ import { BookRideComponent } from './book-ride/book-ride.component';
 import { MouseHoverDirective } from './mouse-hover.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginserviceService } from './loginservice.service';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { LoginserviceService } from './loginservice.service';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [LoginserviceService],
   bootstrap: [AppComponent]

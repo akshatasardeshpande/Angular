@@ -12,12 +12,12 @@
 						<div class="col-xs-8">
 							<input type="text" class="form-control" 
 							[ngClass]="{
-								'valid':fgloginForm.controls['fgName'].valid,
-								'invalid':fgloginForm.controls['fgName'].invalid &&
-								!fgloginForm.controls['fgName'].pristine}"
+								'valid':fgloginForm.controls['userName'].valid,
+								'invalid':fgloginForm.controls['userName'].invalid &&
+								!fgloginForm.controls['userName'].pristine}"
 							 formControlName="userName">
-							 <div *ngIf="fgloginForm.controls['fgPwd'].errors && fgloginForm.controls['fgName'].dirty">
-								<div *ngIf="fgloginForm.controls['fgName'].errors?.['required']" style="color:red">UserName is required</div>
+							 <div *ngIf="fgloginForm.controls['password'].errors && fgloginForm.controls['userName'].dirty">
+								<div *ngIf="fgloginForm.controls['userName'].errors?.['required']" style="color:red">UserName is required</div>
 							</div>
 								
 						</div>	 
@@ -27,9 +27,9 @@
 						<div class="col-xs-8">
 							<input type="password" class="form-control"  
 							[ngClass]="{
-								'valid':fgloginForm.controls['fgPwd'].valid, 
-								'invalid':fgloginForm.controls['fgPwd'].invalid && 
-								!fgloginForm.controls['fgPwd'].pristine}" 
+								'valid':fgloginForm.controls['password'].valid, 
+								'invalid':fgloginForm.controls['password'].invalid && 
+								!fgloginForm.controls['password'].pristine}" 
 							formControlName="password">
 							<div *ngIf="fgloginForm.controls['password'].errors && fgloginForm.controls['password'].dirty">
 								<div *ngIf="fgloginForm.controls['password'].errors?.['required']" style="color:red">Password is required</div>
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 
-					<!-- <div  class="error">Invalid Credentials...Please try again...</div> -->
+					<div  *ngIf="!valid" class="error">Invalid Credentials...Please try again...</div>
 					<br />
 
 					<div class="form-group">

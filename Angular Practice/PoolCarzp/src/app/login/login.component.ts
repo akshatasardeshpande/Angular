@@ -1,7 +1,8 @@
 import { Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { loginmodel } from './loginmodel';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { LoginserviceService } from '../loginservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,35 +17,38 @@ export class LoginComponent implements OnInit  {
   fgloginForm! : FormGroup;
   valid = true;
   Users: loginmodel[] = [];
+ 
   // @ViewChild('uname') usernameElement! : ElementRef;
   
 
-  constructor(private formBuilder: FormBuilder)
-  // constructor(private formBuilder: FormBuilder, private loginService: LoginserviceService)
+  // constructor(private formBuilder: FormBuilder)
+  constructor(private router: Router, private formBuilder: FormBuilder, private loginService: LoginserviceService)
   {
 
   }
 
   ngOnInit() {
     // Makes a service call to fetch users data from the backend
-    // this.loginService.getUsers().subscribe({next:users => this.Users = users});
+    this.loginService.getUsers().subscribe({next:users => this.Users = users});
     this.fgloginForm = this.formBuilder.group({
-      fgName:[this.l.mName], 
-      fgPwd:[this.l.mPwd]
+      userName:[this.l.userName, Validators.required], 
+      password:[this.l.password, Validators.required]
     })
 }
 
 // Invoked when user clicks submit in login form
     // Validates the credentials with the data fetched from the backend
 onSubmit(){
-  //fetches the form object containing the values of all the form controls
-  // this.l = this.fgloginForm.getRawValue();   
-  // const user = this.Users.filter(currUser => currUser.mName === this.l.mName && currUser.mPwd === this.l.mPwd)[0];
-  //       if (user) {
-  //            this.loginService.Susername = this.l.mName;      
-  //       } else {
-  //           this.valid = false;
-  //       }
+  // fetches the form object containing the values of all the form controls
+  this.l = this.fgloginForm.getRawValue();   
+  console.log(this.l);
+  const user = this.Users.filter(currUser => currUser.userName === this.l.userName && currUser.password === this.l.password)[0];
+        if (user) {
+             this.loginService.Susername = this.l.userName;  
+             this.router.navigate(['/book']);    
+        } else {
+            this.valid = false;
+        }
 }
 
 

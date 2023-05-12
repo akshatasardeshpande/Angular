@@ -23,6 +23,16 @@
 			</ul>
 		</div>
 	</nav> -->
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<div class="panel-heading text-right" style="display:none;padding:0px;position:relative;top:15px;" #welcomeEl></div></li>
+		<li class="divider-vertical"></li>
+		<li>
+			<div class="btn-nav" style="padding-right:15px">
+				&nbsp;<a class="btn btn-primary btn-small navbar-btn" (click)="login()"  #loginEl>{{loginTitle}}</a>
+			</div>
+		</li>
+	</ul>
 <!-- Header with the app name on the right corner -->
 <!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
@@ -34,7 +44,7 @@
 
 
 	<!-- Loads the component based on the route path -->
-	<!-- <router-outlet></router-outlet> -->
-	<app-login></app-login>
+	<router-outlet></router-outlet>
+	<!-- <app-login></app-login> -->
 	<!-- <app-book-ride></app-book-ride> -->
 </div>
