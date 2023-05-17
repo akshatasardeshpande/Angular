@@ -4,3 +4,4 @@ export class loginmodel{
     public userName: string = '';
     public password: string = '';
 }
+
