@@ -1,0 +1,43 @@
+<!-- <p>login works!</p> -->
+
+<!-- <h1>{{heading}}</h1>
+<label for="name" class="col-xs-4 control-label" style="text-align:left">Password</label>
+                        <div class="col-xs-8">
+                         <input type="text" class="form-control"[(ngModel)]='heading'>
+                        </div> -->
+
+
+<div class="container container-styles">
+    <div class="col-xs-7 col-xs-offset-3">
+        <div class="card bg">
+            <div class="card-header text-white bg bg-primary">Login</div>
+            <div class="card-body padding">
+                <form  class="form-horizontal" [formGroup]="lform">
+                    <div class="form-group">
+                       <label for="name" class="col-xs-4 control-label" style="text-align:left">User Name</label>
+                       <div class="col-xs-8">
+                        <input type="text" class="form-control" name="UN" formcontrolName="UserName">
+                       </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="col-xs-4 control-label" style="text-align:left">Password</label>
+                        <div class="col-xs-8">
+                         <input type="text" class="form-control" name="PWD" formcontrolName="Password" >
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <span class="col-xs-4"></span>
+                        <div class="col-xs-3">
+                            <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+                        </div>
+                        <span class="col-xs-5" style="position:relative; left:85px; bottom:36px">
+                            <button class="btn btn-primary" style="color:#ffffff; text-decoration: underline;">Cancel</button>
+                        </span>
+                     </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
