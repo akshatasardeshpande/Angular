@@ -18,7 +18,7 @@ PoolCarz is a web application for carpooling. The application allows users to sh
 Login to the application to view ride details
 ![image](/Pictures/poolcarz/1.templates/1.png)
 
-## 2. 
+## 2. Book a Ride:
 Book a ride: Renders the rides available and also allows to filter the details based on the start/endpoint of the rides.
 ![image](/Pictures/poolcarz/1.templates/2.png)
 
