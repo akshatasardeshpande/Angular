@@ -20,8 +20,17 @@
 							<!-- <button  class="btn btn-primary" >Show All Rides</button> -->
                             <button (click)="clickEvent()" type="button" class="btn btn-primary" >Show All Rides</button>
 						</div>
-						<div class="col-xs-3">
-							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" >Offer a Ride!</button>
+						<div class="col-xs-3" >
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="hidebutton" >Offer a Ride!</button>
+						</div>
+						<div class="col-xs-3" >
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="showBtns" >To Office</button>
+						</div>
+						<div class="col-xs-3" >
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="showBtns" >From Office</button>
+						</div>
+						<div class="col-xs-3" >
+							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="showBtns" >Others</button>
 						</div>
 					</div>
 				</form>
@@ -51,12 +60,14 @@ id-number, offerId - string, name - string, car - string, seatsLeft - number, pi
 <!-- III. When the user again clicks the "Show All Rides" button, it should hide the four buttons & the table rendered.
 This button should act as a toggle button to display & hide alternatively -->
 
+
+
 <div  class="col-12" text-center j *ngIf = showTable >
 	<div 
     class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold"
     style="background-color: #718d97; font-family: 'Arial Narrow'">
       Please select a ride!
-</div>
+    </div>
   <table class="table">
     <tr>
       <th>Start Point</th>

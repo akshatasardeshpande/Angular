@@ -9,7 +9,7 @@ export class BookRideComponent implements OnInit {
   ShowAllRides : any = [];
   showBtns : boolean = false;
   showTable : boolean = false;
-
+  hidebutton : boolean = true;
 //   II. Store the ride details in an array & render it in a table. The array should contain the following fields:
 // id-number, offerId - string, name - string, car - string, seatsLeft - number, pickUp - string, destination - string 
 
@@ -50,12 +50,18 @@ export class BookRideComponent implements OnInit {
   // }
 
   clickEvent(){
-    if(this.showTable == false){
+    if(this.showTable == false && this.hidebutton == true && this.showBtns ==false){
       this.showTable= true;
+      this.hidebutton = false;
+      this.showBtns = true;
     }
     else{
       this.showTable= false;
+      this.hidebutton = true;
+      this.showBtns = true;
     }
   }
+
+
 
 }
