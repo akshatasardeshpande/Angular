@@ -58,7 +58,7 @@ export class BookRideComponent implements OnInit {
     else{
       this.showTable= false;
       this.hidebutton = true;
-      this.showBtns = true;
+      this.showBtns = false;
     }
   }
 

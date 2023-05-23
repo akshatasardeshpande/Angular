@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginserviceService } from './loginservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { RideFilterPipe } from './ride-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BookRideComponent,
-    MouseHoverDirective
+    MouseHoverDirective,
+    RideFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -26,5 +28,6 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [LoginserviceService],
   bootstrap: [AppComponent]
+  // bootstrap: [BookRideComponent]
 })
 export class AppModule { }
