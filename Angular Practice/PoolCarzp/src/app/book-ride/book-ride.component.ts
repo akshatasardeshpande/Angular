@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RideFilterPipe } from '../ride-filter.pipe';
+// import { Rides } from './Rides';
 
 @Component({
   selector: 'app-book-ride',
@@ -10,6 +12,9 @@ export class BookRideComponent implements OnInit {
   showBtns : boolean = false;
   showTable : boolean = false;
   hidebutton : boolean = true;
+  filterText : string = '';
+  // aRides: Array<any> = new Array();
+
 //   II. Store the ride details in an array & render it in a table. The array should contain the following fields:
 // id-number, offerId - string, name - string, car - string, seatsLeft - number, pickUp - string, destination - string 
 
@@ -35,6 +40,11 @@ export class BookRideComponent implements OnInit {
       EndPoint: 'Central Mall',
       SeatsAvailable : 5,
       },
+      {
+        StartPoint: 'Jaynagar Mane',
+        EndPoint: 'Infosys',
+        SeatsAvailable : 1,
+        }
     ]
   }
   
@@ -62,6 +72,47 @@ export class BookRideComponent implements OnInit {
     }
   }
 
+  // onTooffice(){
+  //   for(const locn of this.ShowAllRides){
+  //     if(locn.EndPoint == 'Office')
+  //     {  
+  //       console.log(this.ShowAllRides(locn));
+  //     }
+  //   }
+  // }
 
+  // onFromoffice(){
+  //   for(const locn of this.ShowAllRides){
+  //     if(locn.StartPoint == 'Office')
+  //     {  
+  //       console.log(this.ShowAllRides(locn));
+  //     }
+  //   }
+  // }
+
+  // onOthers(){
+  //   for(const locn of this.ShowAllRides){
+  //     if(locn.EndPoint != 'Office' && locn.StartPoint != 'Office' )
+  //     {  
+  //       console.log(this.ShowAllRides(locn));
+  //     }
+  //   }
+  // }
+
+  onTooffice(){
+   //control should go to the filter
+  this.filterText = 'Office';
+  }
+
+  onFromoffice(){
+    //control should go to the filter
+    this.filterText = 'Office';
+  }
+
+  onOthers(){
+   //control should go to the filter
+   this.filterText = 'Other';
+  }
 
 }
+

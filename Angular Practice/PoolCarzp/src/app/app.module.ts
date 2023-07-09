@@ -10,6 +10,7 @@ import { LoginserviceService } from './loginservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RideFilterPipe } from './ride-filter.pipe';
+import { RideDetailsComponent } from './ride-details/ride-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RideFilterPipe } from './ride-filter.pipe';
     LoginComponent,
     BookRideComponent,
     MouseHoverDirective,
-    RideFilterPipe
+    RideFilterPipe,
+    RideDetailsComponent
   ],
   imports: [
     BrowserModule,

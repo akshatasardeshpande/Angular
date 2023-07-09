@@ -24,13 +24,19 @@
 							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="hidebutton" >Offer a Ride!</button>
 						</div>
 						<div class="col-xs-3" >
-							<button  class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" *ngIf="showBtns" >To Office</button>
+							<button (click)="onTooffice()" class="btn btn-primary" style= "position: relative; left: 150px; bottom: 36px" 
+							
+							*ngIf="showBtns" >To Office</button>
 						</div>
 						<div class="col-xs-3" >
-							<button  class="btn btn-primary" style= "position: relative; left: 280px; bottom: 76px" *ngIf="showBtns" >From Office</button>
+							<button (click)="onFromoffice()"  class="btn btn-primary" style= "position: relative; left: 280px; bottom: 76px" 
+							
+							*ngIf="showBtns" >From Office</button>
 						</div>
 						<div class="col-xs-3" >
-							<button  class="btn btn-primary" style= "position: relative; left: 410px; bottom: 110px" *ngIf="showBtns" >Others</button>
+							<button (click)="onOthers()" class="btn btn-primary" style= "position: relative; left: 410px; bottom: 110px" 
+							
+							*ngIf="showBtns" >Others</button>
 						</div>
 					</div>
 				</form>
@@ -74,7 +80,7 @@ This button should act as a toggle button to display & hide alternatively -->
       <th>End Point</th>
       <th>Seats Available</th>
     </tr>
-    <tr *ngFor="let ride of ShowAllRides" >
+    <tr *ngFor= "let ride of ShowAllRides | rideFilter : filterText "  >
 		<td appMouseHover>
 			<b>{{ride.StartPoint}}</b>
 	
