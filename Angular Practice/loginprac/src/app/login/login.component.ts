@@ -47,7 +47,8 @@ onSubmit(){
   // this.l = this.lform.value; 
   // console.log(this.l);
   // console.log(this.pwd);
-  console.log( this.loginService.getUsers().subscribe({next:users => this.Users = users}));
+  console.log( this.loginService.getUsers().subscribe({next:users => this.Users = users})
+  );
  
 }
 
