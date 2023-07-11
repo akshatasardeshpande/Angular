@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { loginmodel } from './loginmodel';
+import { loginModel } from '../models/loginModel';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { LoginserviceService } from '../loginservice.service';
+import { loginService } from '../services/login-service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,19 +13,20 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit  {
 
  
-  l = new loginmodel();
+  l = new loginModel();
   fgloginForm! : FormGroup;
   valid = true;
-  Users: loginmodel[] = [];
+  Users: loginModel[] = [];
  
   // @ViewChild('uname') usernameElement! : ElementRef;
   
 
-  // constructor(private formBuilder: FormBuilder)
-  constructor(private router: Router, private formBuilder: FormBuilder, private loginService: LoginserviceService)
-  {
+  constructor(private formBuilder: FormBuilder)
+  {}
+  // constructor(private router: Router, private formBuilder: FormBuilder, private loginService: LoginserviceService)
+  // {
     
-  }
+  // }
 
   ngOnInit() {
     // Makes a service call to fetch users data from the backend
@@ -39,16 +40,17 @@ export class LoginComponent implements OnInit  {
 // Invoked when user clicks submit in login form
     // Validates the credentials with the data fetched from the backend
 onSubmit(){
-  // fetches the form object containing the values of all the form controls
+//   // fetches the form object containing the values of all the form controls
   this.l = this.fgloginForm.getRawValue();   
   console.log(this.l);
   const user = this.Users.filter(currUser => currUser.userName === this.l.userName && currUser.password === this.l.password)[0];
-        if (user) {
-             this.loginService.Susername = this.l.userName;  
-             this.router.navigate(['/book']);    
-        } else {
-            this.valid = false;
-        }
+        // if (user) {
+        //     //  this.LoginserviceService.Susername = this.l.userName;  
+            
+        //     //  this.router.navigate(['/book']);    
+        // } else {
+        //     this.valid = false;
+        // }
 }
 
 
