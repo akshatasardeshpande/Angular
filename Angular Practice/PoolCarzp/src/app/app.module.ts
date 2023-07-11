@@ -21,6 +21,7 @@ import { RideDetailsComponent } from './ride-details/ride-details.component';
     RideFilterPipe,
     RideDetailsComponent
   ],
+  
   imports: [
     BrowserModule,
     FormsModule,
