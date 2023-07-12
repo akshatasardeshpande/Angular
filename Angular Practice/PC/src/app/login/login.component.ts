@@ -44,13 +44,13 @@ onSubmit(){
   this.l = this.fgloginForm.getRawValue();   
   console.log(this.l);
   const user = this.Users.filter(currUser => currUser.userName === this.l.userName && currUser.password === this.l.password)[0];
-        // if (user) {
-        //     //  this.LoginserviceService.Susername = this.l.userName;  
+        if (user) {
+             this.loginService.Susername = this.l.userName;  
             
-        //     //  this.router.navigate(['/book']);    
-        // } else {
-        //     this.valid = false;
-        // }
+            //  this.router.navigate(['/book']);    
+        } else {
+            this.valid = false;
+        }
 }
 
 
