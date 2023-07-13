@@ -21,16 +21,16 @@ export class LoginComponent implements OnInit  {
   // @ViewChild('uname') usernameElement! : ElementRef;
   
 
-  constructor(private formBuilder: FormBuilder)
-  {}
-  // constructor(private router: Router, private formBuilder: FormBuilder, private loginService: LoginserviceService)
-  // {
+  // constructor(private formBuilder: FormBuilder)
+  // {}
+  constructor(private router: Router, private formBuilder: FormBuilder, private loginService: loginService)
+  {
     
-  // }
+  }
 
   ngOnInit() {
     // Makes a service call to fetch users data from the backend
-    // this.loginService.getUsers().subscribe({next:users => this.Users = users});
+    this.loginService.getUsers().subscribe({next:users => this.Users = users});
     this.fgloginForm = this.formBuilder.group({
       userName:[this.l.userName, Validators.required], 
       password:[this.l.password, Validators.required]
