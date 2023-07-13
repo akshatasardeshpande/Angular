@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { loginModel } from '../models/loginModel';
-
+import { LoginComponent } from '../login/login.component';
 
 @Injectable({
   providedIn: 'root'
