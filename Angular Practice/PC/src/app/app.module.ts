@@ -7,11 +7,13 @@ import { LoginComponent } from './login/login.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { loginService } from './services/login-service.service';
+import { RideDetailsComponent } from './ride-details/ride-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RideDetailsComponent
   ],
   imports: [
     BrowserModule,
