@@ -14,7 +14,7 @@ export class AppComponent {
 
   login() {
     // const value = this.loginVal.nativeElement.innerText;
-    this.loginTitle='';
+    this.loginTitle = '';
     // if (value === 'Login') {
        this.router.navigate(['/login']);
     // } else if (value === 'Logout') {
