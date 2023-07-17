@@ -1,18 +1,20 @@
-<div class="bg-primary">
-    <div class="nav navbar-nav navbar-right ">
-        <div>
-            <div class="panel-heading text-right text-light" style="padding:0px;position:relative;top:15px;" #welcomeEl></div>
-        </div>
-        <div>
+<div>
+    <ul class="nav navbar-nav navbar-right">
+		<li>
+			<div class="panel-heading text-right" style="display:none;padding:0px;position:relative;top:15px;" #welcomeEl></div></li>
+		<li class="divider-vertical"></li>
+		<li>
 			<div class="btn-nav" style="padding-right:15px">
-				&nbsp;<a class="btn btn-primary btn-small navbar-btn" (click)="login()"  #loginEl>{{loginTitle}}</a>
+				&nbsp;
+                <!-- <a class="btn btn-primary btn-small navbar-btn" (click)="login()"  #loginEl>{{loginTitle}}</a> -->
+                <a class="btn btn-primary btn-small navbar-btn" (click)="login()" >login</a>
 			</div>
-		</div>
-    </div>
-
+		</li>
+	</ul>
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">PoolCarz</span>
     </nav>
+    <router-outlet></router-outlet>
 
     <!-- <router-outlet></router-outlet> -->
     <app-login></app-login>
