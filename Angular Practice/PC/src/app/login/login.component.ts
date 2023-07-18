@@ -48,10 +48,9 @@ onSubmit(){
              this.loginService.Susername = this.l.userName;  
             
             //  this.router.navigate(['/book']);    
-        } else {
+        } 
+        else {
             this.valid = false;
         }
 }
-
-
 }
