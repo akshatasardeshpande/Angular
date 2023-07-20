@@ -9,13 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { loginService } from './services/login-service.service';
 import { RideDetailsComponent } from './ride-details/ride-details.component';
 import { ProductsComponent } from './products/products.component';
+import { BookRideComponent } from './book-ride/book-ride.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RideDetailsComponent,
-    ProductsComponent
+    ProductsComponent,
+    BookRideComponent
   ],
   imports: [
     BrowserModule,
