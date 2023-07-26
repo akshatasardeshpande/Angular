@@ -44,6 +44,7 @@ ngOnInit() {
 // }
 
 clickEvent(){
+  // the click event is used for showing table
   if(this.showTable == false){
     this.showTable= true;
   }
