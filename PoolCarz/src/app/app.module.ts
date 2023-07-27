@@ -22,6 +22,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
     // FormGroup
     // FormsModule
   ],
+  //importing
   imports: [
     BrowserModule,
     ReactiveFormsModule,
