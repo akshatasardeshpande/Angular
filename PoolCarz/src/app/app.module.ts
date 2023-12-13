@@ -28,7 +28,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
     ReactiveFormsModule,
   ],
   providers: [],
-  // bootstrap: [AppComponent]
-  bootstrap: [BookRideComponent]
+  bootstrap: [AppComponent]
+  // bootstrap: [BookRideComponent]
 })
 export class AppModule { }
