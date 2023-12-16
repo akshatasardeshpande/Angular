@@ -14,15 +14,16 @@ import { LoginService } from './login.service';
 export class LoginComponent implements OnInit{
   login = new Login();
   users: Login[] = [];
+  userObj : Login[] = [];
   valid = true;  
 
   loginForm!: FormGroup;
 
-constructor(private formBuilder: FormBuilder ){}
+constructor(private formBuilder: FormBuilder,  private loginService: LoginService ){}
 
 
 ngOnInit(): void {
-
+  this.loginService.getUsers().subscribe({next:users => this.users = users});
   this.loginForm = this.formBuilder.group({
     userName: [this.login.userName, Validators.required],
     password: [this.login.password, Validators.required]
@@ -36,7 +37,18 @@ ngOnInit(): void {
        this.login = this.loginForm.getRawValue();      
        console.log("this.login", this.login);
        const user = this.users.filter(currUser => currUser.userName === this.login.userName && currUser.password === this.login.password)[0];
-       console.log("user:",user);
+        
+       if (user) {
+        this.loginService.username = this.login.userName;      
+      //  this.router.navigate(['/products']);
+   } else {
+       this.valid = false;
+   }
+
+       for(let i in user){
+        this.userObj.push(user);
+       }
+       console.log("user:", this.userObj);
     }
 
 

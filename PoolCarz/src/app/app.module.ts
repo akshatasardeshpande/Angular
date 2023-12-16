@@ -11,7 +11,8 @@ import { BookRideComponent } from './book-ride/book-ride.component';
 import { OfferRideComponent } from './offer-ride/offer-ride.component';
 import { MouseHoverDirective } from './mouse-hover.directive';
 
-
+// import { HttpModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule, 
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
