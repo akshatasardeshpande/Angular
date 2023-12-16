@@ -4,6 +4,7 @@ import { ProductService } from '../product.service';
 import { Cart } from '../cart/cart';
 import { Product } from '../product';
 import { LoginService } from 'src/app/login/login.service';
+import { RatingComponent } from '../rating.component';
 
 @Component({
     templateUrl: 'product-list.component.html',

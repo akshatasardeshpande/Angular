@@ -9,6 +9,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CartComponent } from './products/cart/cart.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrderByPipe } from './products/product-list/orderby.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,15 @@ import { ProductListComponent } from './products/product-list/product-list.compo
     WelcomeComponent,
     CartComponent,
     // ProductDetailComponent,
-    ProductListComponent
+    ProductListComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
