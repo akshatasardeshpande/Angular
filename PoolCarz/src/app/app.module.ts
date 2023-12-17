@@ -13,6 +13,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
 
 // import { HttpModule } from '@angular/common/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     BookRideComponent,
     OfferRideComponent,
     MouseHoverDirective,
+    WelcomeComponent,
     // FormGroup
     // FormsModule
   ],
