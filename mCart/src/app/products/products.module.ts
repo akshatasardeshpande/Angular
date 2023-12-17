@@ -19,7 +19,7 @@ import { AuthGuardService } from './auth-guard.service';
     ProductsRoutingModule
   ],
   // declarations: [ProductListComponent, ProductDetailComponent,  OrderByPipe, RatingComponent],
-  declarations: [ProductDetailComponent,  OrderByPipe, RatingComponent],
+  declarations: [ProductDetailComponent, RatingComponent],
   providers: [ProductService, AuthGuardService]
 })
 export class ProductsModule { }
