@@ -15,6 +15,7 @@ import { MouseHoverDirective } from './mouse-hover.directive';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     FormsModule, 
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
