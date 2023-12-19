@@ -14,8 +14,12 @@ import { MouseHoverDirective } from './mouse-hover.directive';
 // import { HttpModule } from '@angular/common/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+
+const appRoutes: Routes = [
+{path:'welcome', component:WelcomeComponent}
+]
 
 @NgModule({
   declarations: [
@@ -24,7 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     BookRideComponent,
     OfferRideComponent,
     MouseHoverDirective,
-    WelcomeComponent,
+    WelcomeComponent
     // FormGroup
     // FormsModule
   ],
@@ -35,7 +39,10 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule, 
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes, {enableTracing: true}  // <-- debugging purposes only
+      )
   ],
   providers: [],
   bootstrap: [AppComponent]
